@@ -26,14 +26,11 @@ function add() {
 
 function uploadBackground() {
 	//Define function ‘uploadBackground’
-	ctx.drawImage(background_imgTag,0.0, canvas.width, canvas.height);
-	
-
+	ctx.drawImage(background_imgTag,0,0, canvas.width, canvas.height);	
 }
 
 function uploadgreencar() {
 	//Define function ‘uploadgreencar’.
-
 	ctx.drawImage(greencar_imgTag,greencar_x,greencar_y,greencar_width,greencar_height);
 }
 
@@ -76,7 +73,7 @@ function up()
 	//Define function to move the car upward
 	if (greencar_y >= 0) {
         greencar_y = greencar_y - 10;
-        console.log("When down arrow is pressed, x = " + greencar_x + " | y = " + greencar_y);
+        console.log("When up arrow is pressed, x = " + greencar_x + " | y = " + greencar_y);
         uploadBackground();
         uploadgreencar();
     }
@@ -85,8 +82,8 @@ function up()
 function down()
 {
 	//Define function to move the car downward
-	if (greencar_y <= 500) {
-        greencarr_y = greencar_y + 10;
+	if (greencar_y <= 350) {
+        greencar_y = greencar_y + 10;
         console.log("When down arrow is pressed, x = " + greencar_x + " | y = " + greencar_y);
         uploadBackground();
         uploadgreencar();
@@ -107,8 +104,8 @@ function left()
 function right()
 {
 	//Define function to move the car right side
-	if (greencar_x <= 700) {
-        greencarr_x = rover_x + 10;
+	if (greencar_x <= 750) {
+        greencar_x = greencar_x + 10;
         console.log("When right arrow is pressed, x = " + greencar_x + " | y = " + greencar_y);
         uploadBackground();
         uploadgreencar();
